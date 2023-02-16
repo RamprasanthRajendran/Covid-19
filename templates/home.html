@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+    .navbar {
+      background-color: red;
+      overflow: hidden;
+      vertical-align:top;
+      width: 100%;
+      border-radius: 20px;
+  }
+
+    .navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    vertical-align: top;
+    border-radius: 25px;
+  }
+    .navbar a:hover {
+      background-color: rgb(0, 0, 0);
+      color: rgb(255, 255, 255);
+  }
+    .navbar a.active {
+      background-color: #000000;
+      color: white;}
+
+    .blink {
+      color: red;
+      font-family: 'Times New Roman', Times, serif;
+      background-color:black
+     
+  }
+  @keyframes blinker {
+      100% {
+          opacity: 10;
+      }
+  }
+.bgimg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: blur(2px); 
+  }
+  .row{
+    background-image: url('/static/covid.jpg');
+  }
+ 
+  p.faf {
+     color: #f9c803;;
+     font-style:style;font-size: 30px;
+  }
+  h2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+  }
+  h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+  }
+  h5{
+    font-style: italic; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
+  }
+  p{
+    font-style: italic; 
+    color: #2b0135;
+    font-style:style;font-size: 30px;
+
+  }
+</style>
+</head>
+<head> <title>Covid 2019</title> <head></head>
+<div class="navbar">
+  <a class="active" href="/">Home</a>
+  <a href="/about">About Us</a>
+</div>
+<body>
+ 
+  <div class="container">
+    <marquee class="blink" width="100%" direction="top" scrollamount=5 animation='blinker 10s linear infinite'>
+      <h1 style='color:"red" style="font-size: xx-large;''>COVID-19 Spread Analysis</font></h1>
+    </marquee>
+    <marquee class="blink" width="100%" direction="top" scrollamount=10>
+      <h2><font color="gold">TOGETHER WE CAN REDUCE COVIDE-19 , LET'S STOP IT ! PLEASE DO WEAR MASK 😷</font> </h2>
+    </marquee>
+      <div class="row">
+       
+      
+      <div class="col-4" >
+          <h5><center><font color="whitesmoke" style="font-size:50px;">Corana Virus dashboard</font> </center></h5>
+          <p><font style="font-size: 30px; color: #f9c803;"><b><center> This is the province state wise covid-19</center></font></b></p>
+          <center>
+          <table style="background-color:#f90909" style="margin:auto;" style="border-color:rgb(247, 9, 9) ;" class="table-responsive-sm" width=75%>
+            <thead>
+              <tr>
+              <th scope="col" style="color: rgb(0, 0, 0);"><b>PROVINCE STATE</b></th>
+              <th scope="col" style="color: rgb(0, 0, 0);">CONFIRMED</tr>
+              </tr>
+          </thead>
+  
+          <tbody>
+      {% for pair in pairs %}
+      <tr>
+      <td bgcolor="black"><CEnter> <font color="white" style="font-family: 'Arial Narrow Bold', sans-serif;">{{pair[0]}}</CEnter></font></td>
+      <td bgcolor="black"> <CEnter><font color="white" style="font-family: 'Arial Narrow Bold', sans-serif;">{{pair[1]}}</CEnter></font></td>
+      </tr>
+      {% endfor %}
+      </tbody>
+      </table></center></div> 
+      <div class="col-8">
+          <h5><font color="red" style="font-size: xx-large;"><b> Map of corona cases.The Bigger the circle , Bigger is the impace of corona virus in that province state.</font></h5>
+          <p <font style="color:gold;" style="font-size:x;"> Using the same data we provided an updated map that contains</font></p>
+          {{cmap|safe}}</div>
+          
+    </div>
+  </div>
+</body>
+</html>
+
+

@@ -1,0 +1,109 @@
+<html>
+    <head><title>Corana virus dashboard</title></head>
+<style>
+     h2 {text-align: center;color:white;font-family: sans-serif;font-size: 300%;}
+    body{text-align: center;}
+    .image{
+
+scrollbar-width:auto;
+max-width:200%;
+background-repeat: no-repeat;
+background-size:cover;
+}
+
+.navbar {
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+  vertical-align:top;
+  width: 100%;
+  border-radius: 5px;
+}
+.navbar a{
+    font-family: sans-serif;
+    border-radius: 25px;
+
+}
+
+
+.navbar a.active:hover {
+  background-color: rgb(163, 172, 239);
+  color: rgb(0, 55, 63);
+}
+
+
+
+
+.contentblock{
+    background-color: rgb(0, 0, 0); 
+  background-color: rgba(0, 0, 0, 0.6); 
+  color: white;
+  
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+  font-family:sans-serif;
+  border-radius: 45px;
+}
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  vertical-align: top;
+}
+.navbar li a {
+  background-color: #000000;
+  color: rgb(8, 127, 0);
+}
+.footer {
+  background-color: rgb(0, 0, 2);
+  color:gold;
+  overflow: hidden;
+  vertical-align:top;
+  width: 100%;
+  font-family: sans-serif;
+  border-radius: 5px;
+}
+table, th, td {
+  border: 1px solid;
+}
+
+
+</style>
+    <div class="navbar">
+        <a class="active" href="/">Home</a>
+       <li><a href="/about">About Us</a></li>
+    </div>
+    <div class="image">
+        <img src="{{url_for('static', filename='covid.jpg')}}" />
+        <body>
+        
+            <div class="contentblock">
+                <h2>COVID19</h2>
+                <p>"Safety work is today recognized as an economic necessity.
+                   It is the study of the right way to do things."
+
+                  
+                    Robert W. Campbell, first president of the National Safety Council</p>
+                <p>Our page shows covid affected states through at the world  
+                </br>😷Please do wear mask😷
+                </p>
+            </div>
+          
+        </body>
+    </div>
+        
+    </div>
+    <div class="footer">
+        <p>Designed and developed by Ramprasanth</p>
+      </div>
+
+</html>
